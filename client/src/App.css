@@ -1,0 +1,259 @@
+:root {
+  --header-height: 3rem;
+  --nav-width: 0px;
+
+  --first-color-1: #fad226;
+  --first-color-2: #e8b332;
+  --first-color-3: #f4a929;
+  --first-color-4: #e58f35;
+  --first-color-5: #f08034;
+
+  --second-color-1: #8acaef;
+  --second-color-2: #16b7ea;
+  --second-color-3: #6ca8d9;
+  --second-color-4: #49739c;
+  --second-color-5: #4061ac;
+
+  --primary-color: white;
+  --text-color: #544232;
+
+  --body-font: 'Roboto', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+
+  --z-fixed: 100;
+}
+
+/* >>>>  GENERAL  >>>> */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
+.section-title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  color: var(--first-color-5);
+  margin-bottom: var(--mb-3);
+}
+
+.section-subtitle {
+  display: block;
+  text-align: center;
+  font-size: var(--normal-font-size);
+  color: var(--second-color-2);
+  margin-bottom: var(--mb-1);
+}
+
+.bd-grid {
+  display: grid;
+  column-gap: 2rem;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  background-color: var(--first-color-5);
+  padding: 0.5rem 1rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: var(--second-color-3);
+  color: var(--primary-color);
+}
+
+.section {
+  padding: 1rem 0 1rem;
+}
+
+/* <<<<  GENERAL  <<<< */
+
+/* >>>>  MEDIA QUERY [min 768] >>>> */
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+
+  .infoScreen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 80%;
+    transform: translate(-50%, -50%);
+  }
+
+  .home__container {
+    padding-top: 70px;
+  }
+
+  .home__button {
+    width: initial;
+  }
+
+  .project__description {
+    text-align: left;
+  }
+
+  .services__container,
+  .skills__container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact__container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .about__container{
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .about__totalization {
+    display: block;
+  }
+
+  .contact__inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__data {
+    text-align: initial;
+  }
+
+  .about__description {
+    margin-bottom: var(--mb-5);
+  }
+
+  .about_img {
+    width: 220px;
+  }
+
+  .about__information {
+    padding-left: 4rem;
+  }
+
+  .education__time {
+    padding: 0 2rem;
+  }
+
+  .project {
+    background: none;
+  }
+
+  .project__container {
+    grid-template-columns: 2fr 1.2fr;
+    padding: 0;
+    border-radius: .5rem;
+  }
+
+  .project__data {
+    padding: 0;
+  }
+
+  .project__title, .project__data {
+    text-align: center;
+  }
+
+  .project__img {
+    width: 300px;
+    align-self: flex-end;
+    margin-bottom: 5rem;
+  }
+
+  .contact__inputs {
+    display: grid;
+    column-gap: 1.5rem;
+  }
+
+  .contact__info {
+    padding-left: 3rem;
+  }
+
+  .footer {
+    background: none;
+  }
+
+  .footer__container {
+    background-color: var(--second-color-3);
+    padding: 2rem 0;
+    margin: 0;
+    border-radius: .5rem;
+  }
+
+  .contactFull{
+    display: block;
+  }
+
+  .section {
+    padding: 2rem 0 1rem;
+  }
+}
+
+
+
+
+
+.tooltipError{
+  margin-left: -20px;
+  height: 100%;
+  /*margin-top: 50;*/
+  color: red;
+}
