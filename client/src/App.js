@@ -4,6 +4,8 @@ import './App.css'
 import React, {useState} from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Education from "./pages/Education/Education";
+import AboutMe from "./pages/About/AboutMe";
+import Skills from "./pages/Skills/Skills";
 
 function App() {
     const itemsNavbar = ["about", "skills", "education", "services", "contact"]
@@ -20,6 +22,8 @@ function App() {
             <div className='infoScreen'>
                 <Switch>
                     <Route path='/' component={Home}/>
+                    <Route path='/about' component={AboutMe} exact/>
+                    <Route path='/skills' component={Skills} exact/>
                     <Route path='/education' component={Education} exact/>
                 </Switch>
             </div>
