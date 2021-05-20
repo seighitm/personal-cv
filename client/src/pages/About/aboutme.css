@@ -1,0 +1,50 @@
+.about__container {
+    row-gap: 2rem;
+}
+
+.about__data {
+    text-align: center;
+}
+
+.about__totalization {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about__description {
+    margin-bottom: var(--mb-3);
+}
+
+.about__img {
+    width: 70%;
+    border-radius: .5rem;
+    margin: 0 auto;
+}
+
+.about__information {
+    margin-bottom: var(--mb-4);
+}
+
+.about__information-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.about__information-data {
+    display: flex;
+    padding-left: 1.5rem;
+    margin-bottom: var(--mb-3);
+}
+
+.about__information-icon {
+    font-size: 1.5rem;
+    color: var(--first-color-5);
+    margin-right: var(--mb-4);
+}
+
+.about__information-subtitle {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
