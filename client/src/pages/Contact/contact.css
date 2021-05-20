@@ -1,0 +1,46 @@
+.contact__input {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(212, 211, 211);
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-2);
+    border-radius: .5rem;
+}
+
+.contactFull{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact__button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--normal-font-size);
+    color: var(--primary-color);
+}
+
+.contact__info {
+    margin: var(--mb-3) 0 var(--mb-3);
+}
+
+.contact__subtitle {
+    padding-left: 0.5rem;
+    font-size: var(--h3-font-size);
+    color: var(--first-color-3);
+    margin-bottom: var(--mb-1);
+}
+
+.contact__text {
+    display: block;
+    padding-left: 1rem;
+}
+
+.disabled{
+    opacity: 50%;
+}
