@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Education from "./pages/Education/Education";
 import AboutMe from "./pages/About/AboutMe";
 import Skills from "./pages/Skills/Skills";
+import Services from "./pages/Services/Services";
 
 function App() {
     const itemsNavbar = ["about", "skills", "education", "services", "contact"]
@@ -21,10 +22,11 @@ function App() {
             <Navbar icons={icons} activeItem={activeItem} setActiveItem={onSelectedCategory} itemsNavbar={itemsNavbar}/>
             <div className='infoScreen'>
                 <Switch>
-                    <Route path='/' component={Home}/>
                     <Route path='/about' component={AboutMe} exact/>
                     <Route path='/skills' component={Skills} exact/>
+                    <Route path='/services' component={Services} exact/>
                     <Route path='/education' component={Education} exact/>
+                    <Route path='/' component={Home}/>
                 </Switch>
             </div>
 
