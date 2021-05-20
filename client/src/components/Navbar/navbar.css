@@ -80,10 +80,15 @@ a {
 }
 
 .nav-link:hover {
-    color: #000; /*the color you want*/
+    color: #000;
 }
+
 .nav-menu .bx{
     display: none;
+}
+
+.bx-menu{
+    font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -121,19 +126,5 @@ a {
         display: block;
         cursor: pointer;
     }
-
-    /*.hamburger.active .bar:nth-child(2) {*/
-    /*    opacity: 0;*/
-    /*}*/
-
-    /*.hamburger.active .bar:nth-child(1) {*/
-    /*    -webkit-transform: translateY(8px) rotate(45deg);*/
-    /*    transform: translateY(8px) rotate(45deg);*/
-    /*}*/
-
-    /*.hamburger.active .bar:nth-child(3) {*/
-    /*    -webkit-transform: translateY(-8px) rotate(-45deg);*/
-    /*    transform: translateY(-8px) rotate(-45deg);*/
-    /*}*/
 }
 

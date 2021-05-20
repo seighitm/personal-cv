@@ -27,7 +27,6 @@ const Skills = () => {
                     <Skill skill={skills.react} name='React'/>
                     <Skill skill={skills.javascript} name='Javascript'/>
                     <Skill skill={skills.redux} name='Redux'/>
-                    <Skill skill={skills.redux} name='Redux'/>
                     <Skill skill={skills.typescript} name='Typescript'/>
                 </div>
                 <div className="skills__content">

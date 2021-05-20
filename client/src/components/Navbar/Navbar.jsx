@@ -23,14 +23,16 @@ const Navbar = ({activeItem, setActiveItem, itemsNavbar, icons}) => {
                         <li key={`${item}_${index}`} onClick={() => setActiveItem(index)}
                             className={activeItem === index ? 'nav-item active' : 'nav-item'}>
                             <div>
-                                <i className={`bx ${icons[index]}`}/>
-                                <NavLink to={item} className={'nav__link'}>{item.toUpperCase()}</NavLink>
+                                <NavLink to={item} className={'nav__link'}>
+                                    <i className={`bx ${icons[index]}`}/>
+                                    {item.toUpperCase()}
+                                </NavLink>
                             </div>
                         </li>
                     )}
                 </ul>
                 <div className="hamburger" onClick={onToggle}>
-                    {[...Array(3)].map(() => <span className="bar"/>)}
+                    <i className='bx bx-menu'/>
                 </div>
             </nav>
         </header>
