@@ -51,6 +51,7 @@ a {
 
 .nav-menu {
     display: flex;
+    /*justify-content: space-between;*/
     align-items: flex-start;
 }
 
@@ -79,10 +80,15 @@ a {
 }
 
 .nav-link:hover {
-    color: #000; /*the color you want*/
+    color: #000;
 }
+
 .nav-menu .bx{
     display: none;
+}
+
+.bx-menu{
+    font-size: 2rem;
 }
 
 @media only screen and (max-width: 768px) {

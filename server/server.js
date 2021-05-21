@@ -3,20 +3,21 @@ const nodemailer = require('nodemailer')
 const { Client } = require('pg');
 const cors = require('cors')
 const app = express()
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
+require('dotenv').config()
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 app.use(cors())
 app.use(express.static('public'))
 app.use(express.json())
 
 const client = new Client({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'testdb',
-    password: 'toor',
-    port: 5432,
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 });
 
 // const query = `
@@ -48,19 +49,19 @@ app.post('/',(req,res)=>{
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "avia.trans.info@gmail.com",
-            pass: "Trans.Avia_2020"
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD
         }
     })
 
     const mailOptions = {
         from: 'Message <info@gmail.com>',
         to: req.body.email,
-        subject: `${req.body.email} ${req.body.subject}`,
+        subject: `${req.body.name} ${req.body.subject}`,
         text: req.body.message
     }
 
-    transporter.sendMail(mailOptions, (error, info)=>{
+    transporter.sendMail(mailOptions, (error)=>{
         if(error){
             console.log(error)
             res.send('error')
@@ -71,7 +72,7 @@ app.post('/',(req,res)=>{
             VALUES ('${req.body.name}', '${req.body.email}', '${req.body.subject}', '${req.body.message}')
             `;
 
-            client.query(query, (err, res) => {
+            client.query(query, (err) => {
                 if (err) {
                     console.error(err);
                     return;
