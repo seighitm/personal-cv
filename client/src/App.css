@@ -120,6 +120,12 @@ img {
   padding: 1rem 0 1rem;
 }
 
+.tooltip-error{
+  margin-left: -20px;
+  height: 100%;
+  color: red;
+}
+
 /* <<<<  GENERAL  <<<< */
 
 /* >>>>  MEDIA QUERY [min 768] >>>> */
@@ -141,12 +147,12 @@ img {
     transform: translate(-50%, -50%);
   }
 
-  .home__container {
-    padding-top: 70px;
+  .home__data{
+    margin-top: 0;
   }
 
-  .home__data {
-    margin-top: 0;
+  .home__container {
+    padding-top: 70px;
   }
 
   .home__button {
@@ -249,15 +255,4 @@ img {
   .section {
     padding: 2rem 0 1rem;
   }
-}
-
-
-
-
-
-.tooltipError{
-  margin-left: -20px;
-  height: 100%;
-  /*margin-top: 50;*/
-  color: red;
 }

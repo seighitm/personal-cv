@@ -9,7 +9,7 @@ const Input = ({typeValidation, inputType, name}) => {
         <div style={{display: "flex"}}>
             <input value={inputType.value} onBlur={e => inputType.onBlur(e)} onChange={e => inputType.onChange(e)}
                    type="text" id="name" placeholder={name} name='email' className="contact__input"/>
-            {inputType.isDirty && <div className='tooltipError'>
+            {inputType.isDirty && <div className='tooltip-error'>
                 <div className="tooltip" style={{display: inputType.inputValid ? 'none' : 'block'}}>
                     <div data-tip='' data-for={id}><i className='bx bx-error'/></div>
                     <ReactTooltip id={id} place="right" type="dark" textColor='red' backgroundColor='#f2f2f2'

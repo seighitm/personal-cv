@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import PropTypes from "prop-types";
 import './navbar.css'
@@ -10,14 +10,10 @@ const Navbar = ({activeItem, setActiveItem, itemsNavbar, icons}) => {
         setVisible(!visible)
     }
 
-    useEffect(() => {
-
-    }, [visible])
-
     return (
         <header className="header">
             <nav className="navbar">
-                <NavLink to="/" className="nav-logo">Home</NavLink>
+                <NavLink to="/" className="nav-logo">HOME</NavLink>
                 <ul className={!visible ? 'nav-menu' : 'nav-menu act'} onClick={onToggle}>
                     {itemsNavbar && itemsNavbar.map((item, index) =>
                         <li key={`${item}_${index}`} onClick={() => setActiveItem(index)}
