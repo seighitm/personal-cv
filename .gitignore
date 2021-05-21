@@ -3,8 +3,13 @@
 # dependencies
 /server/node_modules/
 /client/node_modules/
+/client/.idea
+/server/.idea
+
 /.pnp
 .pnp.js
+
+.idea
 
 # testing
 /coverage
