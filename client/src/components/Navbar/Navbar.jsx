@@ -27,8 +27,10 @@ const Navbar = ({activeItem, setActiveItem, itemsNavbar, icons}) => {
                         </li>
                     )}
                 </ul>
-                <div className="hamburger" onClick={onToggle}>
-                    <i className='bx bx-menu'/>
+                <div className={!visible ? "hamburger" : "hamburger change"} onClick={onToggle}>
+                    <div className='bar1'/>
+                    <div className='bar2'/>
+                    <div className='bar3'/>
                 </div>
             </nav>
         </header>
