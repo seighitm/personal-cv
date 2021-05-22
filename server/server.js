@@ -55,10 +55,10 @@ app.post('/',(req,res)=>{
     })
 
     const mailOptions = {
-        from: 'Message <info@gmail.com>',
-        to: req.body.email,
-        subject: `${req.body.name} ${req.body.subject}`,
-        text: req.body.message
+        from: 'Message CV <info@gmail.com>',
+        to: 'seighitm@mail.ru',
+        subject: `${req.body.subject}`,
+        text: `Name: ${req.body.name}\nEmail: ${req.body.email}\n\n${req.body.message}`
     }
 
     transporter.sendMail(mailOptions, (error)=>{

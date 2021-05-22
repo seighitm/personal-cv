@@ -3,19 +3,20 @@
 # dependencies
 /server/node_modules/
 /client/node_modules/
-/client/.idea
-/server/.idea
+/client/.idea/
+/server/.idea/
 
 /.pnp
 .pnp.js
 
-.idea
+.idea/
 
 # testing
 /coverage
 
 # production
-/build
+/client/build
+/server/build
 
 # misc
 .DS_Store
