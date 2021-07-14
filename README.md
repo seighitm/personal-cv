@@ -1,4 +1,4 @@
-# Resume
+# CV
 
 ## Project preview
 
